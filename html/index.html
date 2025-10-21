@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="shortcut icon" href="\assets\images\favicon.ico" type="image/x-icon">
+    <style>
+        nav {
+            border: 5px;
+            border-style: dotted;
+        }
+    </style>                     <!--  Create a style for elements  -->
+</head>
+<body>
+    <script>
+        class HelloWorld extends HTMLElement {
+            constructor() {
+                super();
+                // This runs when the element is created (but not yet in the DOM)
+            }
+
+            connectedCallback() {
+                // Runs when the element is inserted into the document
+                console.log("Hello world");
+            }
+        }
+
+        // Register the element with the browser
+        customElements.define("hello-world", HelloWorld);
+    </script>
+    <header>
+        <nav>
+            <ul>
+                <a href="/html/index.html">
+                    <li>
+                        Home
+                    </li>
+                </a>
+                <a href="/html/portfolio.html">
+                    <li>
+                        Portfolio
+                    </li>
+                </a>
+                <a href="/html/about-me.html">
+                    <li>
+                        About Me
+                    </li>
+                </a>
+                <a href="/html/contact.html">
+                    <li>
+                        Contact
+                    </li>
+                </a>    
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <dialog open>
+            <p>Welcome! You have found the right candidate!</p>
+            <form method="dialog">
+                <button>OK</button>
+            </form>
+        </dialog>
+        <h1>Cesar Lopez Nunez</h1>
+        <picture>
+            <source srcset="\assets\images\myPictureSmaller.jpg" media="(width >= 1000px)">
+            <img src="\assets\images\myPictureMuchSmaller.jpg" alt="Picture of Myself">
+        </picture>
+    </main>
+    <footer>
+        <p>Welcome to my Website!</p>
+        <hello-world></hello-world>
+    </footer>
+    <noscript>
+        <p>You have Javascript disabled or are using a browser that does not support Javascript.</p>
+    </noscript>
+</body>
+</html>
