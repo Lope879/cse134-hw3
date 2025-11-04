@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Page</title>
     <link rel="shortcut icon" href="\assets\images\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <a href="/html/index.html">
+        <nav class="nav-bar">
+            <ul class="nav-list">
+                <a id="home-button" href="/html/index.html">
                     <li>
                         Home
                     </li>
@@ -33,15 +34,16 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="portfolio-main">
         <!-- Temporary in the meantime that we do not use Javascript. -->     
-        <button>Projects</button>
-        <a href="\html\projects.html">Click to Go To Projects Page</a>
-        <button>Education</button>
-        <a href="\html\education.html">Click to Go To Education Page</a>
+         <section>
+            <button class="portfolio-button">Projects</button>
+            <a href="\html\projects.html">Click to Go To Projects Page</a>
+         </section>
+         <section>
+            <button class="portfolio-button">Education</button>
+            <a href="\html\education.html">Click to Go To Education Page</a>
+         </section>
     </main>
-    <footer>
-
-    </footer>
 </body>
 </html>

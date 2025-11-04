@@ -1,0 +1,157 @@
+:root {
+    --body-background-color: #0D0;
+    --body-font-family: "Montserrat";
+}
+
+::target-text {
+        background-color: rebeccapurple;
+        color: white;
+        font-weight: bold;
+}
+
+body {
+    background-color: var(--body-background-color);
+    font-family: var(--body-font-family), sans-serif;
+}
+
+#index-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr;
+    place-items: center;
+    background-size: 100%;
+}
+
+@media (max-width: 500px) {
+    #index-main {
+        grid-template-columns: 1fr;
+    }
+}
+
+#pic {
+    grid-column: 1;
+    grid-row: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 1rem;
+    font-size: 1.3rem;
+
+    li {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        background-color: #090;
+    }
+
+    li:hover {
+        background-color: orange;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 405px) {
+    .nav-list {
+        flex-direction: column;
+    }
+}
+
+#home-button {
+    margin-right: auto;
+}
+
+footer {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.portfolio-button {
+    width: 8rem;
+    height: 6rem;
+    background-color: orange;
+}
+
+#my-name {
+    transition: 2s;
+}
+
+#my-name:hover {
+    font-size: 3rem;
+}
+
+details:hover {
+    text-decoration: dotted;
+    background-color: orange;
+}
+
+#portfolio-main {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    place-content: center;
+    justify-content: center;
+    padding: 2rem;
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 550px) {
+    #portfolio-main {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+#projects-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+@media (max-width: 1000px) {
+    #projects-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+#pic108 {
+    width: 100%;
+    height: auto;
+}
+
+#pic110 {
+    width: 100%;
+    height: auto;
+}
+
+#plantsImg {
+    width: 25%;
+    height: auto;
+    transform: scale(80%) rotate(15deg) translate(30px, -30px);
+}
+
+@keyframes SvgAnimation {
+    0% {left: 0;}
+    50% {left: 30vw;}
+    100% {left: 80vw;}
+}
+
+svg {
+    animation-name: SvgAnimation;
+    animation-duration: 4s;
+    position: relative;
+    animation-iteration-count: infinite;
+}

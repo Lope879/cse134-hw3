@@ -5,25 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects Page</title>
     <link rel="shortcut icon" href="\assets\images\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
     <style>
         project-card {
-            display: flex;
+            display: block;
             border-style: dotted;
-            width: 520px;
-            height: 150px;
-            margin: 12px;
-            padding: 18px;
-            gap: 20px;
+            width: auto;
+            height: auto;
+            margin: 1rem;
+            padding: 2rem;
+            gap: 2rem;
             border-radius: 8px;
             text-align: left;
+            flex-shrink: 1;
         }
     </style>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <a href="/html/index.html">
+        <nav class="nav-bar">
+            <ul class="nav-list">
+                <a id="home-button" href="/html/index.html">
                     <li>
                         Home
                     </li>
@@ -48,17 +50,34 @@
     </header>
     <main>
         <h1>My Projects</h1>
-        <project-card>
+        <div id="projects-layout">
+            <project-card>
             <h2>COGS108: Data Science in Practice</h2>
-            <p>I collaborated with my team to perform a research paper using techniques such as web scraping to gather information in the internet and run analytics. 
-                The focus of the research paper was  to identify if there was a correlation between population density and preference for fashion styles.</p>
-        </project-card>
-        <project-card>
-            <h2>CSE110: Software Engineering</h2>
-            <p>I was part of a team that collaborated to create a website about improving one's habits using a skill-tree type of tracking. My team focused on learning 
-                and improving our knowledge of <span style="color: blue;">HTML, CSS, and Javascript</span> to make the website. We would meet often to discuss our status.
-            </p>
-        </project-card>
+            <p>I collaborated with my team to complete a research paper doing Exploratory Data Analysis. 
+                We scraped the web and built our datasets. Using Python we created visuals and ran tests like OLS Regression to
+                analyze significant results in our data.
+                The focus of the research paper was to identify if there was a correlation between population density and preference for fashion styles.</p>
+            <a href="https://github.com/COGS108/Group128_SP25">LINK TO THE PROJECT</a>
+            </project-card>
+            
+            <picture>
+                <source srcset="\assets\images\108projectImage.PNG" media="(width >= 1000px)">
+                <img id="pic108" src="\assets\images\108projectImage.png " alt="Picture of Analysis Example in COGS108 Project">
+            </picture>
+
+            <project-card>
+                <h2>CSE110: Software Engineering</h2>
+                <p>I was part of a team that collaborated to create a website about improving one's habits using a skill-tree type of tracking. My team focused on learning 
+                    and improving our knowledge of <span style="color: blue;">HTML, CSS, and Javascript</span> to make the website. We would meet often to discuss our status.
+                </p>
+                <a href="https://github.com/cse110-sp25-group1/cse110-sp25-group1/">LINK TO THE PROJECT</a>
+            </project-card>
+
+            <picture>
+                <source srcset="\assets\images\110projectImage.png" media="(width >= 1000px)">
+                <img id="pic108" src="\assets\images\110projectImage.png" alt="Picture Example of Home Screen of CSE110 Project">
+            </picture>
+        </div>
     </main>
     <footer>
 

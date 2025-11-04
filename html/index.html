@@ -5,34 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="shortcut icon" href="\assets\images\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
     <style>
-        nav {
+        -nav {
             border: 5px;
             border-style: dotted;
         }
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
     </style>                     <!--  Create a style for elements  -->
 </head>
 <body>
-    <script>
-        class HelloWorld extends HTMLElement {
-            constructor() {
-                super();
-                // This runs when the element is created (but not yet in the DOM)
-            }
-
-            connectedCallback() {
-                // Runs when the element is inserted into the document
-                console.log("Hello world");
-            }
-        }
-
-        // Register the element with the browser
-        customElements.define("hello-world", HelloWorld);
-    </script>
     <header>
-        <nav>
-            <ul>
-                <a href="/html/index.html">
+        <nav class="nav-bar">
+            <ul class="nav-list">
+                <a id="home-button" href="/html/index.html">
                     <li>
                         Home
                     </li>
@@ -55,23 +42,28 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <dialog open>
+    <main id="index-main">
+        <!-- <dialog open>
             <p>Welcome! You have found the right candidate!</p>
             <form method="dialog">
                 <button>OK</button>
             </form>
-        </dialog>
-        <h1>Cesar Lopez Nunez</h1>
-        <picture>
+        </dialog> -->
+        <picture id="pic">
             <source srcset="\assets\images\myPictureSmaller.jpg" media="(width >= 1000px)">
             <img src="\assets\images\myPictureMuchSmaller.jpg" alt="Picture of Myself">
         </picture>
+        <div id="hgroups-section">
+            <hgroup>
+            <h1 id="my-name">Cesar Lopez Nunez</h1>
+            <p>Undergraduate college student pursuing a career on Computer Science. </p>
+        </hgroup>
+        <details>
+            <summary>What Am I Doing Now</summary>
+            <p>Implementing CSS on my portfolio website after working on the HTML base.</p>
+        </details>
+        </div>
     </main>
-    <footer>
-        <p>Welcome to my Website!</p>
-        <hello-world></hello-world>
-    </footer>
     <noscript>
         <p>You have Javascript disabled or are using a browser that does not support Javascript.</p>
     </noscript>
